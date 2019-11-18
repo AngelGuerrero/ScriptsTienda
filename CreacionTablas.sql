@@ -84,5 +84,17 @@ CREATE TABLE IF NOT EXISTS `CompraInventario` (
   FOREIGN KEY (IdProducto) REFERENCES Inventario(IdProducto)
 ) ENGINE = InnoDB;
 
+-- Agregar una nueva columna a la tabla Compra
+ALTER TABLE `Compra` ADD COLUMN `Fecha` DATE NOT NULL;
+
+-- Renombrar una tabla
+ALTER TABLE `Inventario` RENAME TO `Producto`;
+
+-- Mostrar las bases de datos
+SHOW DATABASES;
+
 -- MUESTRA LAS TABLAS DE LA BASE DE DATOS
 SHOW TABLES;
+
+-- Muestra la estructura de una tabla
+DESCRIBE Cliente;
